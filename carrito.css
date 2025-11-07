@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFFBEA; /* Fondo color hueso */
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: #FF8C00; /* Naranja para encabezados */
+}
+
+ul {
+    list-style: none;
+    background-color: #388E3C; /* Verde bosque para la barra */
+    text-align: center;
+    padding: 0;
+}
+
+ul > li {
+    display: inline-block;
+    position: relative;
+}
+
+ul a {
+    display: block;
+    padding: 12px 18px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+ul a:hover {
+    background-color: #FF8C00; /* Naranja al pasar el ratón */
+}
+
+ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #4CAF50; /* Verde más claro para submenú */
+    min-width: 180px;
+    z-index: 100;
+    text-align: left;
+}
+
+ul li:hover > ul {
+    display: block;
+}
+
+ul ul li {
+    display: block;
+}
+
+ul ul a:hover {
+    background-color: #388E3C;
+}
