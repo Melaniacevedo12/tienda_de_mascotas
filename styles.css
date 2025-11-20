@@ -1,0 +1,73 @@
+/* Estilos básicos para el body (opcional, basados en tu código anterior) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin-top: 20px;
+}
+
+/* ------------------ ESTILOS DEL MENÚ HORIZONTAL ------------------ */
+
+/* Contenedor principal del menú */
+.menu-horizontal {
+    list-style: none; /* Quita los puntos */
+    padding: 0;
+    margin: 0;
+    background-color: #cf480eb7; /* Color de fondo para la barra de navegación */
+    display: flex; /* Usamos flexbox para que los ítems se alineen horizontalmente */
+    justify-content: center; /* Centra los ítems del menú en la barra */
+}
+
+/* Ítems principales (Home, Quienes somos, etc.) */
+.menu-horizontal > li {
+    position: relative; /* Esencial para posicionar el submenú */
+    display: block; /* Mantiene el formato de bloque */
+}
+
+/* Enlaces (los textos del menú) */
+.menu-horizontal a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.menu-horizontal a:hover {
+    background-color: #575757; /* Un color diferente al pasar el ratón */
+}
+
+/* ------------------ ESTILOS DE LOS SUBMENÚS ------------------ */
+
+/* Submenús (Historia, Dónde nos encuentras, etc.) */
+.menu-horizontal ul {
+    display: none; /* OCULTAR los submenús por defecto */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute; /* Posiciona el submenú relativo al ítem padre */
+    top: 100%; /* Coloca el submenú justo debajo del ítem padre */
+    left: 0;
+    background-color: #444;
+    min-width: 180px;
+    z-index: 1000;
+}
+
+/* Mostrar submenú al pasar el ratón sobre el ítem principal */
+.menu-horizontal li:hover > ul {
+    display: block;
+}
+
+/* Ítems del submenú */
+.menu-horizontal ul li {
+    display: block; /* Asegura que los ítems del submenú sean verticales */
+}
+
+.menu-horizontal ul a {
+    padding: 10px 15px;
+    text-align: left;
+}
